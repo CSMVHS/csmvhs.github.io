@@ -102,7 +102,7 @@ body#home {
     min-height: 100vh;
 
     section.banner {
-        background: url(/csmvhs/images/codecity.png);
+        background: url(/images/codecity.png);
         background-size: cover;
         padding: 90px 50px 50px 50px;
         height: 100vh;

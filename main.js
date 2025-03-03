@@ -73,7 +73,7 @@ function randomBannerImage() {
     }
 
     const banners = [
-        "/csmvhs/images/codecity.png",
+        "/images/codecity.png",
     ]
 
     const bannerEl = document.querySelector("section.banner");
@@ -96,13 +96,13 @@ function navImage() {
     const images = document.querySelectorAll("img.nav-home");
     images.forEach(img => {
         img.addEventListener("click", () => {
-            window.location.href = "/csmvhs/";
+            window.location.href = "/";
         })
     });
 }
 
 function navShow() {
-    const navHTML = `<img src="/csmvhs/images/cshs.png" class="nav-home">
+    const navHTML = `<img src="/images/cshs.png" class="nav-home">
     <!-- <a class="nav-register direct">Register</a> -->
     <a class="nav-attendance direct">Attendance</a>
 
@@ -141,7 +141,7 @@ function navClicks() {
     const homeImg = document.querySelectorAll("nav img.nav-home");
     homeImg.forEach(img => {
         img.addEventListener("click", () => {
-            window.location.href = "/csmvhs/";
+            window.location.href = "/";
         })
     })
 
@@ -153,7 +153,7 @@ function navClicks() {
                 window.open("https://docs.google.com/forms/d/e/1FAIpQLSc6H-MgWrG5BaRCc-z8L2O5DqTlBGiM4N8D9c3w0OjDdfL4CQ/viewform", "_blank");
                 return;
             }
-            window.location.href = `/csmvhs/${(dct.classList[0]).substring(4)}`;
+            window.location.href = `/${(dct.classList[0]).substring(4)}`;
         })
     })
 
