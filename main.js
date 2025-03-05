@@ -103,17 +103,8 @@ function navImage() {
 
 function navShow() {
     const navHTML = `<img src="/images/cshs.png" class="nav-home">
-    <!-- <a class="nav-register direct">Register</a> -->
     <a class="nav-attendance direct">Attendance</a>
-
-    <div class="dropdown">
-      <a class="nav-competitions dropper">Competitions</a>
-      <div class="dropdown-content-wrapper">
-        <div class="dropdown-content">
-          <a class="nav-competitions-info">Info</a>
-        </div>
-      </div>
-    </div>
+    <a class="nav-competitions direct">Competitions</a>
     <div class="dropdown">
       <a class="nav-slideshows dropper">Slideshows</a>
       <div class="dropdown-content-wrapper">
@@ -152,15 +143,26 @@ function navClicks() {
             if (dct.classList[0] === "nav-attendance") {
                 window.open("https://docs.google.com/forms/d/e/1FAIpQLSc6H-MgWrG5BaRCc-z8L2O5DqTlBGiM4N8D9c3w0OjDdfL4CQ/viewform", "_blank");
                 return;
+            } else if (dct.classList[0] === "nav-competitions") {
+                window.open("https://docs.google.com/document/d/1vE80UsvdijjKAoAHCdTDW_yXc1xHGC-yMM1gTGfZD28/edit?usp=sharing", "_blank");
+                return;
             }
             window.location.href = `/${(dct.classList[0]).substring(4)}`;
         })
     })
-
-    const competitionsDropdownEls = document.querySelectorAll("nav a.nav-competitions a");
-    // todo: dropdown clicks
 }
 
+function bannerButtons() {
+    const attendanceBtn = document.querySelector("section.banner div.buttons button.attendance");
+    attendanceBtn.addEventListener("click", () => {
+        window.open("https://docs.google.com/forms/d/e/1FAIpQLSc6H-MgWrG5BaRCc-z8L2O5DqTlBGiM4N8D9c3w0OjDdfL4CQ/viewform", "_blank");    
+    })
+
+    const aboutBtn = document.querySelector("section.banner div.buttons button.about");
+    aboutBtn.addEventListener("click", () => {
+        window.location.href = "#aboutScrollTo";
+    })
+}
 
 local("init");
 loadingCover();
@@ -170,3 +172,4 @@ navImage();
 navShow();
 navClicks();
 officersContactButtons();
+bannerButtons();
